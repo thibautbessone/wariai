@@ -17,7 +17,7 @@ class Picker {
 
     /**
      * Shuffles the optionsArray into results using the Fisher-Yates shuffle algorithm
-     * @return {Array} the randomized values
+     * @return {Array} this.results - the randomized values
      */
     getRandomizedList() {
         this.results = [...this.options]; // Cloning the array
@@ -47,7 +47,7 @@ class Picker {
 
     /**
      * Returns an element chosen randomly with weight
-     * @return {JSON} the chosen element
+     * @return {JSON} elem - the chosen element
      */
     pickOneWithWeight() {
         this.calculateTotalWeight();
@@ -63,7 +63,7 @@ class Picker {
 
     /**
      * Returns the original JSON object given
-     * @returns {JSON}
+     * @returns {JSON} this.options - the original options
      */
     getBaseOptions() {
         return this.options;
@@ -71,7 +71,7 @@ class Picker {
 
     /**
      * Returns the sum of all the weights
-     * @returns {number|*}
+     * @returns {number|*} this.totalWeight - sum of all the weights
      */
     getTotalWeight() {
         return this.totalWeight;
