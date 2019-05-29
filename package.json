@@ -1,0 +1,18 @@
+{
+  "name": "wariai",
+  "version": "1.0.0",
+  "description": "Randomly choose between weighted options",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "javascript",
+    "random",
+    "weight",
+    "picker"
+  ],
+  "author": "thibautbessone",
+  "license": "MIT"
+}
