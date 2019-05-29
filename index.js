@@ -8,7 +8,6 @@ class Picker {
     constructor(options) {
         try {
             this.options = JSON.parse(options);
-            this.weightedResults = [];
             this.results = this.options;
             this.totalWeight = 0;
         } catch (e) { // Malformed JSON array
@@ -18,8 +17,9 @@ class Picker {
 
     /**
      * Shuffles the optionsArray into results using the Fisher-Yates shuffle algorithm
+     * @return {Array} the randomized values
      */
-    randomize() {
+    getRandomizedList() {
         this.results = [...this.options]; // Cloning the array
         let elemNumber = this.results.length;
 
@@ -32,6 +32,7 @@ class Picker {
             this.results[elemNumber] = this.results[index];
             this.results[index] = temp;
         }
+        return this.results;
     }
 
     /**
@@ -48,7 +49,7 @@ class Picker {
      * Returns an element chosen randomly with weight
      * @return {JSON} the chosen element
      */
-    randomizeWithWeight() {
+    pickOneWithWeight() {
         this.calculateTotalWeight();
         let random = Math.floor(Math.random() * this.totalWeight) + 1;
 
@@ -66,22 +67,6 @@ class Picker {
      */
     getBaseOptions() {
         return this.options;
-    }
-
-    /**
-     * Returns the results according to the weights
-     * @returns {Array}
-     */
-    getWeightedResults() {
-        return this.weightedResults;
-    }
-
-    /**
-     * Returns the results without taking weight into consideration
-     * @returns {Array}
-     */
-    getResults() {
-        return this.results;
     }
 
     /**
