@@ -52,7 +52,6 @@ class Picker {
     pickOneWithWeight() {
         this.calculateTotalWeight();
         let random = Math.floor(Math.random() * this.totalWeight) + 1;
-
         for(let elem of this.options) {
             random = random - elem.weight;
             if(random <= 0) {
