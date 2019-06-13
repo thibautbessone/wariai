@@ -1,6 +1,10 @@
 # Wariai
 
-#### Shuffles randomly a list or pick an option among several weighted ones.
+#### Shuffles randomly a list or pick an option among several weighted ones
+
+#### Install
+
+With npm : `npm install wariai`
 
 First, create a JSON string containing your options & weights following this pattern : 
 
@@ -20,7 +24,3 @@ You can now pick an element or shuffle the list with the following code :
 picker.pickOneWithWeight(); // Returns a random object from the list, taking weights into account
 picker.getRandomizedList(); // Returns a randomly shuffled list of elements
 ```
-
-
-
-

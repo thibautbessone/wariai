@@ -3,7 +3,7 @@ class Picker {
     /**
      * Entity used to randomly pick an option among the given ones
      * @constructor
-     * @param {String} options - array containing the options & their associated weight
+     * @param {String} options - array containing the options & their respective weights
      */
     constructor(options) {
         try {
@@ -11,7 +11,7 @@ class Picker {
             this.results = this.options;
             this.totalWeight = 0;
         } catch (e) { // Malformed JSON array
-            console.log(e);
+            throw e;
         }
     }
 

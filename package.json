@@ -1,6 +1,6 @@
 {
   "name": "wariai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Randomly choose between weighted options",
   "main": "index.js",
   "scripts": {
